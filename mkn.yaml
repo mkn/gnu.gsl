@@ -1,6 +1,9 @@
 
 
 name: gsl
+property:
+  # dependency versions: master on master, latest on latest (a bare dep is the default branch)
+  mkn.kul.version: master
 inc: inc gsl
 lib: gsl gslcblas
 path: lib
@@ -17,7 +20,7 @@ profile:
   out: gsl
   lib: gslcblas
   path: lib
-  dep: mkn.kul
+  dep: mkn.kul#${mkn.kul.version}
   src:
     gsl/version.c
     gsl/utils/placeholder.c
